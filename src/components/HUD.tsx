@@ -85,8 +85,18 @@ export const HUD = () => {
                         </div>
                     )}
 
-                    <div className="text-gray-400 text-sm uppercase tracking-widest mt-2">
-                        Refresh to play again
+                    <div className="mt-6">
+                        <button
+                            onClick={() => window.location.reload()}
+                            className={clsx(
+                                "px-6 py-3 rounded-full font-bold text-sm tracking-widest uppercase transition-all transform hover:scale-105 shadow-lg",
+                                status === 'WON'
+                                    ? "bg-yellow-400 text-black hover:bg-yellow-300 shadow-yellow-400/20"
+                                    : "bg-red-600 text-white hover:bg-red-500 shadow-red-600/20"
+                            )}
+                        >
+                            Try Again
+                        </button>
                     </div>
                 </div>
             )}

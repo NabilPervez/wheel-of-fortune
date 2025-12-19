@@ -1,32 +1,602 @@
 [
     {
-        "id": "101",
-        "category": "THING",
-        "text": "PEANUT BUTTER JELLY TIME",
-        "difficulty": 1
-    },
-    {
-        "id": "102",
+        "id": "001",
         "category": "PHRASE",
-        "text": "MAY THE FORCE BE WITH YOU",
+        "text": "A BLESSING IN DISGUISE",
         "difficulty": 1
     },
     {
-        "id": "103",
+        "id": "002",
         "category": "PLACE",
-        "text": "NEW YORK CITY",
+        "text": "THE STATUE OF LIBERTY",
         "difficulty": 1
     },
     {
-        "id": "104",
+        "id": "003",
+        "category": "FOOD & DRINK",
+        "text": "MACARONI AND CHEESE",
+        "difficulty": 1
+    },
+    {
+        "id": "004",
         "category": "MOVIE",
-        "text": "THE SHAWSHANK REDEMPTION",
+        "text": "BACK TO THE FUTURE",
+        "difficulty": 1
+    },
+    {
+        "id": "005",
+        "category": "THING",
+        "text": "REMOTE CONTROL",
+        "difficulty": 1
+    },
+    {
+        "id": "006",
+        "category": "SONG TITLE",
+        "text": "SWEET HOME ALABAMA",
+        "difficulty": 1
+    },
+    {
+        "id": "007",
+        "category": "PHRASE",
+        "text": "BEAT AROUND THE BUSH",
         "difficulty": 2
     },
     {
-        "id": "105",
-        "category": "SONG LYRICS",
-        "text": "NEVER GONNA GIVE YOU UP",
+        "id": "008",
+        "category": "ANIMAL",
+        "text": "AFRICAN ELEPHANT",
+        "difficulty": 1
+    },
+    {
+        "id": "009",
+        "category": "TV SHOW",
+        "text": "GAME OF THRONES",
+        "difficulty": 1
+    },
+    {
+        "id": "010",
+        "category": "PROFESSION",
+        "text": "SOFTWARE ENGINEER",
         "difficulty": 2
+    },
+    {
+        "id": "011",
+        "category": "PLACE",
+        "text": "THE GREAT WALL OF CHINA",
+        "difficulty": 1
+    },
+    {
+        "id": "012",
+        "category": "THING",
+        "text": "FIRE EXTINGUISHER",
+        "difficulty": 2
+    },
+    {
+        "id": "013",
+        "category": "PHRASE",
+        "text": "ACTIONS SPEAK LOUDER THAN WORDS",
+        "difficulty": 2
+    },
+    {
+        "id": "014",
+        "category": "MOVIE",
+        "text": "THE WIZARD OF OZ",
+        "difficulty": 1
+    },
+    {
+        "id": "015",
+        "category": "FOOD & DRINK",
+        "text": "CHOCOLATE CHIP COOKIE",
+        "difficulty": 1
+    },
+    {
+        "id": "016",
+        "category": "PERSON",
+        "text": "ALBERT EINSTEIN",
+        "difficulty": 1
+    },
+    {
+        "id": "017",
+        "category": "PHRASE",
+        "text": "BETTER LATE THAN NEVER",
+        "difficulty": 1
+    },
+    {
+        "id": "018",
+        "category": "THING",
+        "text": "SWISS ARMY KNIFE",
+        "difficulty": 2
+    },
+    {
+        "id": "019",
+        "category": "PLACE",
+        "text": "SYDNEY OPERA HOUSE",
+        "difficulty": 2
+    },
+    {
+        "id": "020",
+        "category": "SONG TITLE",
+        "text": "BOHEMIAN RHAPSODY",
+        "difficulty": 2
+    },
+    {
+        "id": "021",
+        "category": "PHRASE",
+        "text": "BITE THE BULLET",
+        "difficulty": 2
+    },
+    {
+        "id": "022",
+        "category": "MOVIE",
+        "text": "PIRATES OF THE CARIBBEAN",
+        "difficulty": 2
+    },
+    {
+        "id": "023",
+        "category": "SPORT",
+        "text": "PROFESSIONAL WRESTLING",
+        "difficulty": 2
+    },
+    {
+        "id": "024",
+        "category": "THING",
+        "text": "ELECTRIC GUITAR",
+        "difficulty": 1
+    },
+    {
+        "id": "025",
+        "category": "PHRASE",
+        "text": "BREAK THE ICE",
+        "difficulty": 1
+    },
+    {
+        "id": "026",
+        "category": "FOOD & DRINK",
+        "text": "PEPPERONI PIZZA",
+        "difficulty": 1
+    },
+    {
+        "id": "027",
+        "category": "PLACE",
+        "text": "MOUNT EVEREST",
+        "difficulty": 1
+    },
+    {
+        "id": "028",
+        "category": "TV SHOW",
+        "text": "STRANGER THINGS",
+        "difficulty": 1
+    },
+    {
+        "id": "029",
+        "category": "PHRASE",
+        "text": "CALL IT A DAY",
+        "difficulty": 2
+    },
+    {
+        "id": "030",
+        "category": "THING",
+        "text": "ROLLER COASTER",
+        "difficulty": 1
+    },
+    {
+        "id": "031",
+        "category": "MOVIE",
+        "text": "THE LORD OF THE RINGS",
+        "difficulty": 1
+    },
+    {
+        "id": "032",
+        "category": "PHRASE",
+        "text": "COST AN ARM AND A LEG",
+        "difficulty": 2
+    },
+    {
+        "id": "033",
+        "category": "PLACE",
+        "text": "THE EIFFEL TOWER",
+        "difficulty": 1
+    },
+    {
+        "id": "034",
+        "category": "SONG TITLE",
+        "text": "HOTEL CALIFORNIA",
+        "difficulty": 2
+    },
+    {
+        "id": "035",
+        "category": "THING",
+        "text": "WIRELESS HEADPHONES",
+        "difficulty": 2
+    },
+    {
+        "id": "036",
+        "category": "PHRASE",
+        "text": "CUT CORNERS",
+        "difficulty": 2
+    },
+    {
+        "id": "037",
+        "category": "FOOD & DRINK",
+        "text": "FISH AND CHIPS",
+        "difficulty": 2
+    },
+    {
+        "id": "038",
+        "category": "MOVIE",
+        "text": "FORREST GUMP",
+        "difficulty": 1
+    },
+    {
+        "id": "039",
+        "category": "PHRASE",
+        "text": "DONT CRY OVER SPILLED MILK",
+        "difficulty": 2
+    },
+    {
+        "id": "040",
+        "category": "THING",
+        "text": "WASHING MACHINE",
+        "difficulty": 1
+    },
+    {
+        "id": "041",
+        "category": "PLACE",
+        "text": "GOLDEN GATE BRIDGE",
+        "difficulty": 1
+    },
+    {
+        "id": "042",
+        "category": "TV SHOW",
+        "text": "THE OFFICE",
+        "difficulty": 1
+    },
+    {
+        "id": "043",
+        "category": "PHRASE",
+        "text": "EVERY CLOUD HAS A SILVER LINING",
+        "difficulty": 3
+    },
+    {
+        "id": "044",
+        "category": "SONG TITLE",
+        "text": "SMELLS LIKE TEEN SPIRIT",
+        "difficulty": 2
+    },
+    {
+        "id": "045",
+        "category": "THING",
+        "text": "VACUUM CLEANER",
+        "difficulty": 1
+    },
+    {
+        "id": "046",
+        "category": "MOVIE",
+        "text": "THE DARK KNIGHT",
+        "difficulty": 1
+    },
+    {
+        "id": "047",
+        "category": "PHRASE",
+        "text": "GET OUT OF HAND",
+        "difficulty": 2
+    },
+    {
+        "id": "048",
+        "category": "PLACE",
+        "text": "NIAGARA FALLS",
+        "difficulty": 1
+    },
+    {
+        "id": "049",
+        "category": "FOOD & DRINK",
+        "text": "SPAGHETTI AND MEATBALLS",
+        "difficulty": 1
+    },
+    {
+        "id": "050",
+        "category": "THING",
+        "text": "VIRTUAL REALITY HEADSET",
+        "difficulty": 3
+    },
+    {
+        "id": "051",
+        "category": "PHRASE",
+        "text": "HIT THE NAIL ON THE HEAD",
+        "difficulty": 2
+    },
+    {
+        "id": "052",
+        "category": "MOVIE",
+        "text": "INDIANA JONES",
+        "difficulty": 1
+    },
+    {
+        "id": "053",
+        "category": "PLACE",
+        "text": "BUCKINGHAM PALACE",
+        "difficulty": 2
+    },
+    {
+        "id": "054",
+        "category": "SONG TITLE",
+        "text": "DONT STOP BELIEVIN",
+        "difficulty": 1
+    },
+    {
+        "id": "055",
+        "category": "PHRASE",
+        "text": "IGNORANCE IS BLISS",
+        "difficulty": 2
+    },
+    {
+        "id": "056",
+        "category": "THING",
+        "text": "TRAFFIC LIGHT",
+        "difficulty": 1
+    },
+    {
+        "id": "057",
+        "category": "TV SHOW",
+        "text": "BREAKING BAD",
+        "difficulty": 1
+    },
+    {
+        "id": "058",
+        "category": "PHRASE",
+        "text": "IT TAKES TWO TO TANGO",
+        "difficulty": 3
+    },
+    {
+        "id": "059",
+        "category": "FOOD & DRINK",
+        "text": "GRILLED CHEESE SANDWICH",
+        "difficulty": 1
+    },
+    {
+        "id": "060",
+        "category": "MOVIE",
+        "text": "JURASSIC PARK",
+        "difficulty": 1
+    },
+    {
+        "id": "061",
+        "category": "PLACE",
+        "text": "THE GRAND CANYON",
+        "difficulty": 1
+    },
+    {
+        "id": "062",
+        "category": "PHRASE",
+        "text": "JUMP ON THE BANDWAGON",
+        "difficulty": 3
+    },
+    {
+        "id": "063",
+        "category": "THING",
+        "text": "REFRIGERATOR MAGNET",
+        "difficulty": 2
+    },
+    {
+        "id": "064",
+        "category": "SONG TITLE",
+        "text": "BILLIE JEAN",
+        "difficulty": 1
+    },
+    {
+        "id": "065",
+        "category": "PHRASE",
+        "text": "KILL TWO BIRDS WITH ONE STONE",
+        "difficulty": 3
+    },
+    {
+        "id": "066",
+        "category": "MOVIE",
+        "text": "THE LION KING",
+        "difficulty": 1
+    },
+    {
+        "id": "067",
+        "category": "PLACE",
+        "text": "TIMES SQUARE",
+        "difficulty": 1
+    },
+    {
+        "id": "068",
+        "category": "FOOD & DRINK",
+        "text": "CHICKEN NOODLE SOUP",
+        "difficulty": 1
+    },
+    {
+        "id": "069",
+        "category": "PHRASE",
+        "text": "LET THE CAT OUT OF THE BAG",
+        "difficulty": 3
+    },
+    {
+        "id": "070",
+        "category": "THING",
+        "text": "DIGITAL CAMERA",
+        "difficulty": 2
+    },
+    {
+        "id": "071",
+        "category": "TV SHOW",
+        "text": "FRIENDS",
+        "difficulty": 1
+    },
+    {
+        "id": "072",
+        "category": "PHRASE",
+        "text": "MISS THE BOAT",
+        "difficulty": 2
+    },
+    {
+        "id": "073",
+        "category": "MOVIE",
+        "text": "STAR WARS A NEW HOPE",
+        "difficulty": 1
+    },
+    {
+        "id": "074",
+        "category": "PLACE",
+        "text": "MACHU PICCHU",
+        "difficulty": 3
+    },
+    {
+        "id": "075",
+        "category": "SONG TITLE",
+        "text": "I WILL ALWAYS LOVE YOU",
+        "difficulty": 2
+    },
+    {
+        "id": "076",
+        "category": "PHRASE",
+        "text": "ONCE IN A BLUE MOON",
+        "difficulty": 2
+    },
+    {
+        "id": "077",
+        "category": "THING",
+        "text": "MICROWAVE OVEN",
+        "difficulty": 1
+    },
+    {
+        "id": "078",
+        "category": "FOOD & DRINK",
+        "text": "STRAWBERRY CHEESECAKE",
+        "difficulty": 2
+    },
+    {
+        "id": "079",
+        "category": "PHRASE",
+        "text": "PIECE OF CAKE",
+        "difficulty": 1
+    },
+    {
+        "id": "080",
+        "category": "MOVIE",
+        "text": "TOY STORY",
+        "difficulty": 1
+    },
+    {
+        "id": "081",
+        "category": "PLACE",
+        "text": "STONEHENGE",
+        "difficulty": 2
+    },
+    {
+        "id": "082",
+        "category": "PHRASE",
+        "text": "PULL SOMEONE'S LEG",
+        "difficulty": 2
+    },
+    {
+        "id": "083",
+        "category": "THING",
+        "text": "TOOTHBRUSH",
+        "difficulty": 1
+    },
+    {
+        "id": "084",
+        "category": "TV SHOW",
+        "text": "THE SIMPSONS",
+        "difficulty": 1
+    },
+    {
+        "id": "085",
+        "category": "PHRASE",
+        "text": "RAINING CATS AND DOGS",
+        "difficulty": 2
+    },
+    {
+        "id": "086",
+        "category": "MOVIE",
+        "text": "THE GODFATHER",
+        "difficulty": 2
+    },
+    {
+        "id": "087",
+        "category": "FOOD & DRINK",
+        "text": "FRENCH FRIES",
+        "difficulty": 1
+    },
+    {
+        "id": "088",
+        "category": "PLACE",
+        "text": "THE COLOSSEUM",
+        "difficulty": 2
+    },
+    {
+        "id": "089",
+        "category": "PHRASE",
+        "text": "SPILL THE BEANS",
+        "difficulty": 2
+    },
+    {
+        "id": "090",
+        "category": "THING",
+        "text": "SUNGLASSES",
+        "difficulty": 1
+    },
+    {
+        "id": "091",
+        "category": "SONG TITLE",
+        "text": "ROLLING IN THE DEEP",
+        "difficulty": 2
+    },
+    {
+        "id": "092",
+        "category": "PHRASE",
+        "text": "TAKE WITH A GRAIN OF SALT",
+        "difficulty": 3
+    },
+    {
+        "id": "093",
+        "category": "MOVIE",
+        "text": "TITANIC",
+        "difficulty": 1
+    },
+    {
+        "id": "094",
+        "category": "PLACE",
+        "text": "MOUNT RUSHMORE",
+        "difficulty": 2
+    },
+    {
+        "id": "095",
+        "category": "PHRASE",
+        "text": "THE BALL IS IN YOUR COURT",
+        "difficulty": 3
+    },
+    {
+        "id": "096",
+        "category": "THING",
+        "text": "UMBRELLA",
+        "difficulty": 1
+    },
+    {
+        "id": "097",
+        "category": "FOOD & DRINK",
+        "text": "ICED COFFEE",
+        "difficulty": 1
+    },
+    {
+        "id": "098",
+        "category": "PHRASE",
+        "text": "UNDER THE WEATHER",
+        "difficulty": 2
+    },
+    {
+        "id": "099",
+        "category": "MOVIE",
+        "text": "AVATAR",
+        "difficulty": 1
+    },
+    {
+        "id": "100",
+        "category": "PHRASE",
+        "text": "YOU CANT JUDGE A BOOK BY ITS COVER",
+        "difficulty": 3
     }
 ]

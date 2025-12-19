@@ -1,12 +1,18 @@
-import { useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 import { PuzzleBoard } from './components/PuzzleBoard'
 import { HUD } from './components/HUD'
 import { VirtualKeyboard } from './components/VirtualKeyboard'
 import { useGameStore, useGameActions } from './store/useGameStore'
+import { useSoundEffects } from './hooks/useSoundEffects'
 
 function App() {
-  const { status } = useGameStore()
+  const { status, currentPuzzle, guessedLetters, strikes } = useGameStore()
   const { startGame, tick, attemptSolve } = useGameActions()
+  const { playCorrect, playWrong, playWin, playLose } = useSoundEffects()
+
+  // Refs to track previous values for sound triggers
+  const prevGuessedLetters = useRef<string[]>([])
+  const prevStatus = useRef(status)
 
   // Init game
   useEffect(() => {
@@ -26,28 +32,52 @@ function App() {
     return () => clearInterval(interval)
   }, [status, tick])
 
-  // Handle visibility change (Pause on minimize)
+  // Status Change Sounds (Win/Lose)
   useEffect(() => {
-    const handleVisibilityChange = () => {
-      if (document.hidden && status === 'PLAYING') {
-        // Optionally pause, but spec says "Timer logic... prevent throttling... if user minimizes... pause the game".
-        // Actually if we pause, we don't need a worker!
-        // So pausing is the solution to throttling.
-        // But the user said "must use RAF... OR pause".
-        // Wait, "Timer logic must use... to prevent throttling... (though gameplay is primarily active). Note: If the user minimizes the app, pause the game."
-        // This implies if I pause, I don't need the worker for background running.
-        // I'll implementing pausing.
-        useGameStore.getState().actions.pauseGame();
-      } else if (!document.hidden && status === 'PAUSED') {
-        // Optionally resume or let user resume manually.
-        // Usually games pause and show a "Resume" button.
-        // But for now I'll just pause it.
-      }
-    };
+    if (status === 'WON' && prevStatus.current !== 'WON') playWin();
+    if (status === 'LOST' && prevStatus.current !== 'LOST') playLose();
+    prevStatus.current = status;
+  }, [status, playWin, playLose]);
 
+  // Guess Sounds (Letters)
+  useEffect(() => {
+    if (!currentPuzzle) return;
+
+    // Skip logic if we just mounted or reset (simple check: if prev is empty and current has 3+)
+    // This might skip the first manual guess if we are incredibly fast, but prevents the "startup Ding"
+    if (prevGuessedLetters.current.length === 0 && guessedLetters.length >= 3) {
+      prevGuessedLetters.current = guessedLetters;
+      return;
+    }
+
+    const currentLen = guessedLetters.length;
+    const prevLen = prevGuessedLetters.current.length;
+
+    if (currentLen > prevLen) {
+      // A new letter was added
+      const newLetter = guessedLetters[guessedLetters.length - 1];
+      // Check if it's in the puzzle
+      if (currentPuzzle.text.toUpperCase().includes(newLetter)) {
+        playCorrect();
+      } else {
+        playWrong();
+      }
+    }
+    prevGuessedLetters.current = guessedLetters;
+  }, [guessedLetters, currentPuzzle, playCorrect, playWrong]);
+
+
+  const handleVisibilityChange = () => {
+    if (document.hidden && status === 'PLAYING') {
+      useGameStore.getState().actions.pauseGame();
+    }
+  };
+
+  useEffect(() => {
     document.addEventListener("visibilitychange", handleVisibilityChange);
     return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
   }, [status]);
+
 
   const handleSolve = () => {
     // Simple prompt for now as per MVP
