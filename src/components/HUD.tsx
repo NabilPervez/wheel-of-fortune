@@ -60,40 +60,8 @@ export const HUD = () => {
             {/* Removed dynamic hook logic that caused crashes. Simplification. */}
 
             {/* Game Status Message overlay (if done) */}
-            {(status === 'WON' || status === 'LOST') && (
-                <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 bg-black/80 backdrop-blur-sm p-6 text-center z-50 border-y border-white/10 shadow-2xl animate-fade-in-up w-full">
-                    <h2 className={clsx(
-                        "text-6xl font-black italic tracking-tighter mb-2",
-                        status === 'WON' ? "text-yellow-400" : "text-red-600"
-                    )}>
-                        {status === 'WON' ? 'SURVIVED!' : 'ELIMINATED'}
-                    </h2>
-
-                    {/* Reveal Answer if Lost */}
-                    {status === 'LOST' && (
-                        <div className="mb-4">
-                            <div className="text-gray-400 text-xs uppercase tracking-widest mb-1">The answer was:</div>
-                            <div className="text-2xl font-bold text-white tracking-wide">
-                                {useGameStore.getState().currentPuzzle?.text || "UNKNOWN"}
-                            </div>
-                        </div>
-                    )}
-
-                    <div className="mt-6">
-                        <button
-                            onClick={() => window.location.reload()}
-                            className={clsx(
-                                "px-6 py-3 rounded-full font-bold text-sm tracking-widest uppercase transition-all transform hover:scale-105 shadow-lg",
-                                status === 'WON'
-                                    ? "bg-yellow-400 text-black hover:bg-yellow-300 shadow-yellow-400/20"
-                                    : "bg-red-600 text-white hover:bg-red-500 shadow-red-600/20"
-                            )}
-                        >
-                            Try Again
-                        </button>
-                    </div>
-                </div>
-            )}
+            {/* Incorrect Letters Log */}
+            {/* Removed dynamic hook logic that caused crashes. Simplification. */}
         </div>
     );
 };

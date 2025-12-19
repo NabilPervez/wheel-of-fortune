@@ -4,6 +4,7 @@ import { HUD } from './components/HUD'
 import { VirtualKeyboard } from './components/VirtualKeyboard'
 import { useGameStore, useGameActions } from './store/useGameStore'
 import { useSoundEffects } from './hooks/useSoundEffects'
+import clsx from 'clsx'
 
 function App() {
   const { status, currentPuzzle, guessedLetters, hintsRemaining, turnTimeRemaining } = useGameStore()
@@ -13,6 +14,7 @@ function App() {
   // Refs to track previous values for sound triggers
   const prevGuessedLetters = useRef<string[]>([])
   const prevStatus = useRef(status)
+  const prevStrikes = useRef(0)
 
   // Countdown State handled locally purely for visual/sound
   const [countdown, setCountdown] = useState<number | null>(null);
@@ -73,8 +75,18 @@ function App() {
     }
   }, [turnTimeRemaining, status, playTick]);
 
-  // Guess Sounds (Letters)
+  // Guess Sounds (Letters) & Timeout Penalty
   useEffect(() => {
+    // If strike count increased
+    if (useGameStore.getState().strikes > prevStrikes.current) {
+      // Check if guessed letters count is same. If so, it was a TIMEOUT, not a wrong guess.
+      // (Wrong guess adds letter then strikes. Timeout just strikes.)
+      if (guessedLetters.length === prevGuessedLetters.current.length) {
+        playLose(); // Use NBA Buzzer sound for timeout penalty
+      }
+    }
+    prevStrikes.current = useGameStore.getState().strikes;
+
     if (!currentPuzzle) return;
 
     // Skip logic if we just mounted or reset (simple check: if prev is empty and current has 3+)
@@ -94,11 +106,11 @@ function App() {
       if (currentPuzzle.text.toUpperCase().includes(newLetter)) {
         playCorrect();
       } else {
-        playWrong();
+        playWrong(); // Regular buzzer for wrong letter
       }
     }
     prevGuessedLetters.current = guessedLetters;
-  }, [guessedLetters, currentPuzzle, playCorrect, playWrong]);
+  }, [guessedLetters, currentPuzzle, playCorrect, playWrong, playLose, useGameStore.getState().strikes]);
 
 
   const handleVisibilityChange = () => {
@@ -191,6 +203,47 @@ function App() {
 
         <VirtualKeyboard />
       </section>
+
+      {/* Game Status Message overlay (if done) */}
+      {(status === 'WON' || status === 'LOST') && (
+        <div className="absolute inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
+          <div className="w-full max-w-md bg-neutral-900 border border-white/10 rounded-2xl p-6 text-center shadow-2xl transform transition-all">
+            <h2 className={clsx(
+              "text-5xl xs:text-6xl font-black italic tracking-tighter mb-4",
+              status === 'WON' ? "text-yellow-400" : "text-red-600"
+            )}>
+              {status === 'WON' ? 'SURVIVED!' : 'ELIMINATED'}
+            </h2>
+
+            {/* Reveal Answer if Lost */}
+            {status === 'LOST' && (
+              <div className="mb-6 bg-white/5 rounded-xl p-4">
+                <div className="text-gray-400 text-xs uppercase tracking-widest mb-1">The answer was:</div>
+                <div className="text-xl xs:text-2xl font-bold text-white tracking-wide break-words">
+                  {useGameStore.getState().currentPuzzle?.text || "UNKNOWN"}
+                </div>
+              </div>
+            )}
+
+            <div className="mt-2">
+              <button
+                onClick={() => window.location.reload()}
+                className={clsx(
+                  "w-full px-6 py-4 rounded-xl font-bold text-sm tracking-widest uppercase transition-all transform hover:scale-[1.02] shadow-lg flex items-center justify-center gap-2",
+                  status === 'WON'
+                    ? "bg-yellow-400 text-black hover:bg-yellow-300 shadow-yellow-400/20"
+                    : "bg-red-600 text-white hover:bg-red-500 shadow-red-600/20"
+                )}
+              >
+                <span>Try Again</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   )
