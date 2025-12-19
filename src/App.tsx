@@ -25,8 +25,8 @@ function App() {
   // Handle STARTING state (Countdown)
   useEffect(() => {
     if (status === 'STARTING') {
-      setCountdown(5);
-      let count = 5;
+      setCountdown(3);
+      let count = 3;
       playCountdown(); // Initial beep
 
       const timer = setInterval(() => {
