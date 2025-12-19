@@ -62,6 +62,21 @@ export const HUD = () => {
 
             <StrikeTracker />
 
+            {/* Incorrect Letters Log - UPDATED */}
+            <div className="flex gap-2 items-center h-8 mt-2">
+                <span className="text-[10px] text-gray-500 uppercase tracking-widest mr-2">Misses:</span>
+                {useGameStore(state => {
+                    const puzzleText = state.currentPuzzle?.text.toUpperCase() || "";
+                    const misses = state.guessedLetters.filter(l => !puzzleText.includes(l));
+                    if (misses.length === 0) return <span className="text-white/20 text-xs">-</span>;
+                    return misses.map((char, i) => (
+                        <span key={i} className="text-red-500 font-bold text-lg animate-pulse">
+                            {char}
+                        </span>
+                    ));
+                })}
+            </div>
+
             {/* Game Status Message overlay (if done) */}
             {(status === 'WON' || status === 'LOST') && (
                 <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 bg-black/80 backdrop-blur-sm p-6 text-center z-50 border-y border-white/10 shadow-2xl animate-fade-in-up">

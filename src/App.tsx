@@ -78,7 +78,7 @@ function App() {
       <section className="flex-1 min-h-0 bg-neutral-900 border-t border-white/10 flex flex-col pb-safe-bottom z-20 shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
         <div className="w-full flex justify-between items-center px-4 py-2 border-b border-white/5 bg-white/5">
           <div className="text-[10px] text-gray-500 uppercase tracking-widest">
-            WordRush Survial v1.0
+            Wheel Of Fortune v1.0
           </div>
           <div className="flex gap-2">
             {(status === 'WON' || status === 'LOST') && (

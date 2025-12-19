@@ -59,10 +59,19 @@ export const useGameStore = create<GameState>((set, get) => ({
             // Pick random puzzle
             const randomPuzzle = puzzlesData[Math.floor(Math.random() * puzzlesData.length)];
 
+            // Get all unique letters in the puzzle (A-Z only)
+            const uniqueLetters = Array.from(new Set(
+                randomPuzzle.text.toUpperCase().split('').filter(char => /[A-Z]/.test(char))
+            ));
+
+            // Shuffle and pick 3
+            const shuffled = uniqueLetters.sort(() => 0.5 - Math.random());
+            const initialGuessed = shuffled.slice(0, 3);
+
             set({
                 status: 'PLAYING',
                 currentPuzzle: randomPuzzle,
-                guessedLetters: [],
+                guessedLetters: initialGuessed,
                 strikes: 0,
                 globalTimeRemaining: GLOBAL_TIME_LIMIT,
                 turnTimeRemaining: TURN_TIME_LIMIT,

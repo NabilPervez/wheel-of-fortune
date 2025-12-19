@@ -10,9 +10,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
-        name: 'WordRush: Survival',
-        short_name: 'WordRush',
-        description: 'Survival Wheel of Fortune Game',
+        name: 'Wheel of Fortune',
+        short_name: 'Wheel of Fortune',
+        description: 'Wheel of Fortune Game',
         theme_color: '#1a1a1a',
         background_color: '#1a1a1a',
         display: 'standalone',
