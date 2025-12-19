@@ -61,9 +61,8 @@ export const useSoundEffects = () => {
     }, [playTone]);
 
     const playLose = useCallback(() => {
-        // Descending tone
-        playTone(300, 'triangle', 0.5, 0.2);
-        setTimeout(() => playTone(200, 'triangle', 0.5, 0.2), 400);
+        // NBA Buzzer: Low Sawtooth, long duration
+        playTone(100, 'sawtooth', 1.5, 0.4);
     }, [playTone]);
 
     const playCountdown = useCallback(() => {

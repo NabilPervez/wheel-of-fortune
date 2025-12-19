@@ -5,11 +5,6 @@ import clsx from 'clsx';
 export const HUD = () => {
     const { globalTimeRemaining, turnTimeRemaining, status } = useGameStore();
 
-    const radius = 24;
-    const circumference = radius * 2 * Math.PI;
-    const offset = circumference - (turnTimeRemaining / 15) * circumference;
-
-    return (
     return (
         <div className="flex items-center justify-center w-full gap-4 sm:gap-8 py-2 md:py-4">
 
