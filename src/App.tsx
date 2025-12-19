@@ -136,13 +136,13 @@ function App() {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-20 pointer-events-none bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
-      {/* Top 35% - Puzzle Board */}
-      <section className="h-[35%] flex-none flex items-center justify-center border-b border-white/5 bg-gradient-to-b from-white/5 to-transparent relative z-10 pt-safe-top">
+      {/* Top 30% - Puzzle Board */}
+      <section className="h-[30%] flex-none flex items-center justify-center border-b border-white/5 bg-gradient-to-b from-white/5 to-transparent relative z-10 pt-safe-top">
         <PuzzleBoard />
       </section>
 
-      {/* Middle 30% - HUD */}
-      <section className="h-[30%] flex-none flex flex-col justify-center items-center relative z-0">
+      {/* Middle 25% - HUD */}
+      <section className="h-[25%] flex-none flex flex-col justify-center items-center relative z-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-500/10 via-transparent to-transparent opacity-50" />
         <HUD />
       </section>
