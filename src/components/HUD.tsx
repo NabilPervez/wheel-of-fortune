@@ -7,7 +7,7 @@ export const HUD = () => {
 
     const radius = 24;
     const circumference = radius * 2 * Math.PI;
-    const offset = circumference - (turnTimeRemaining / 10) * circumference;
+    const offset = circumference - (turnTimeRemaining / 15) * circumference;
 
     return (
         <div className="flex flex-col items-center justify-center w-full gap-6 py-4">
@@ -15,7 +15,7 @@ export const HUD = () => {
             <div className="flex items-end gap-12">
                 {/* Global Timer */}
                 <div className="flex flex-col items-center gap-1">
-                    <span className="text-[10px] text-gray-400 uppercase tracking-[0.2em]">Survivor</span>
+                    <span className="text-[10px] text-gray-400 uppercase tracking-[0.2em]">Solve Timer</span>
                     <div className={clsx(
                         "text-5xl font-black tabular-nums tracking-tighter transition-colors",
                         globalTimeRemaining <= 10 ? "text-red-500 animate-pulse" : "text-white"
@@ -26,7 +26,7 @@ export const HUD = () => {
 
                 {/* Turn Timer (Circular) */}
                 <div className="flex flex-col items-center gap-1">
-                    <span className="text-[10px] text-gray-400 uppercase tracking-[0.2em]">Turn</span>
+                    <span className="text-[10px] text-gray-400 uppercase tracking-[0.2em]">Turn Timer</span>
                     <div className="relative w-14 h-14 flex items-center justify-center">
                         <svg className="w-full h-full -rotate-90 transform">
                             <circle

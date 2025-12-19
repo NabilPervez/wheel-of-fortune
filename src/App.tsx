@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { PuzzleBoard } from './components/PuzzleBoard'
 import { HUD } from './components/HUD'
 import { VirtualKeyboard } from './components/VirtualKeyboard'
@@ -6,18 +6,45 @@ import { useGameStore, useGameActions } from './store/useGameStore'
 import { useSoundEffects } from './hooks/useSoundEffects'
 
 function App() {
-  const { status, currentPuzzle, guessedLetters } = useGameStore()
-  const { startGame, tick, attemptSolve } = useGameActions()
-  const { playCorrect, playWrong, playWin, playLose } = useSoundEffects()
+  const { status, currentPuzzle, guessedLetters, hintsRemaining, turnTimeRemaining } = useGameStore()
+  const { startGame, tick, attemptSolve, useHint, startActiveGameplay } = useGameActions()
+  const { playCorrect, playWrong, playWin, playLose, playCountdown, playGo, playTick } = useSoundEffects()
 
   // Refs to track previous values for sound triggers
   const prevGuessedLetters = useRef<string[]>([])
   const prevStatus = useRef(status)
 
+  // Countdown State handled locally purely for visual/sound
+  const [countdown, setCountdown] = useState<number | null>(null);
+
   // Init game
   useEffect(() => {
     startGame()
   }, [])
+
+  // Handle STARTING state (Countdown)
+  useEffect(() => {
+    if (status === 'STARTING') {
+      setCountdown(5);
+      let count = 5;
+      playCountdown(); // Initial beep
+
+      const timer = setInterval(() => {
+        count--;
+        if (count > 0) {
+          setCountdown(count);
+          playCountdown();
+        } else {
+          setCountdown(null);
+          playGo();
+          startActiveGameplay();
+          clearInterval(timer);
+        }
+      }, 1000);
+
+      return () => clearInterval(timer);
+    }
+  }, [status, playCountdown, playGo, startActiveGameplay]);
 
   // Timer loop
   useEffect(() => {
@@ -38,6 +65,13 @@ function App() {
     if (status === 'LOST' && prevStatus.current !== 'LOST') playLose();
     prevStatus.current = status;
   }, [status, playWin, playLose]);
+
+  // Turn Timer Ticking Sound (Last 5 seconds)
+  useEffect(() => {
+    if (status === 'PLAYING' && turnTimeRemaining <= 5 && turnTimeRemaining > 0) {
+      playTick();
+    }
+  }, [turnTimeRemaining, status, playTick]);
 
   // Guess Sounds (Letters)
   useEffect(() => {
@@ -90,6 +124,15 @@ function App() {
   return (
     <div className="h-[100dvh] w-full flex flex-col bg-[#1a1a1a] text-white overflow-hidden relative">
 
+      {/* Countdown Overlay */}
+      {status === 'STARTING' && countdown !== null && (
+        <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+          <div className="text-9xl font-black text-white animate-ping">
+            {countdown}
+          </div>
+        </div>
+      )}
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-20 pointer-events-none bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
@@ -106,9 +149,22 @@ function App() {
 
       {/* Bottom - Input (Rest of space) */}
       <section className="flex-1 min-h-0 bg-neutral-900 border-t border-white/10 flex flex-col pb-safe-bottom z-20 shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
+
+        {/* Hint Button Bar (Centered above keyboard) */}
+        <div className="w-full flex justify-center py-2 bg-white/5 border-b border-white/5">
+          <button
+            onClick={useHint}
+            disabled={status !== 'PLAYING' || hintsRemaining <= 0}
+            className="flex items-center gap-2 px-6 py-2 rounded-full bg-blue-600 hover:bg-blue-500 disabled:bg-blue-900/50 disabled:text-blue-200/50 text-white font-bold text-sm tracking-wider uppercase transition-all shadow-[0_0_15px_rgba(37,99,235,0.3)] disabled:shadow-none transform active:scale-95"
+          >
+            <span>Hint</span>
+            <span className="bg-white/20 px-2 rounded text-xs">{hintsRemaining}</span>
+          </button>
+        </div>
+
         <div className="w-full flex justify-between items-center px-4 py-2 border-b border-white/5 bg-white/5">
           <div className="text-[10px] text-gray-500 uppercase tracking-widest">
-            Wheel Of Fortune v1.0
+            {/* Version text removed */}
           </div>
           <div className="flex gap-2">
             {(status === 'WON' || status === 'LOST') && (

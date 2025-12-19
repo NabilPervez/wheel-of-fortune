@@ -66,5 +66,20 @@ export const useSoundEffects = () => {
         setTimeout(() => playTone(200, 'triangle', 0.5, 0.2), 400);
     }, [playTone]);
 
-    return { playCorrect, playWrong, playWin, playLose };
+    const playCountdown = useCallback(() => {
+        // Short tick for countdown
+        playTone(600, 'sine', 0.1, 0.2);
+    }, [playTone]);
+
+    const playGo = useCallback(() => {
+        // High pitch GO
+        playTone(1000, 'sine', 0.4, 0.3);
+    }, [playTone]);
+
+    const playTick = useCallback(() => {
+        // Woodblock tick
+        playTone(400, 'square', 0.05, 0.05);
+    }, [playTone]);
+
+    return { playCorrect, playWrong, playWin, playLose, playCountdown, playGo, playTick };
 };

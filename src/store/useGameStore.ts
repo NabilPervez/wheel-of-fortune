@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import puzzlesData from '../data/puzzles.json';
 
-export type GameStatus = 'IDLE' | 'PLAYING' | 'PAUSED' | 'WON' | 'LOST';
+export type GameStatus = 'IDLE' | 'STARTING' | 'PLAYING' | 'PAUSED' | 'WON' | 'LOST';
 
 export interface Puzzle {
     id: string;
@@ -17,11 +17,14 @@ interface GameState {
     strikes: number;
     globalTimeRemaining: number;
     turnTimeRemaining: number;
+    hintsRemaining: number;
 
     actions: {
         startGame: () => void;
+        startActiveGameplay: () => void;
         guessLetter: (letter: string) => void;
         attemptSolve: (phrase: string) => void;
+        useHint: () => void;
         tick: () => void;
         pauseGame: () => void;
         resumeGame: () => void;
@@ -30,17 +33,15 @@ interface GameState {
 }
 
 const GLOBAL_TIME_LIMIT = 60;
-const TURN_TIME_LIMIT = 10;
+const TURN_TIME_LIMIT = 15;
 const MAX_STRIKES = 3;
 
 // Helper to check if won
 const checkWinCondition = (puzzle: Puzzle, guessed: string[]) => {
     const normalizedText = puzzle.text.toUpperCase();
-    // We only care about letters A-Z needed to be guessed
-    // Spaces are ignored in check
     for (const char of normalizedText) {
         if (/[A-Z]/.test(char) && !guessed.includes(char)) {
-            return false; // Found a letter not guessed yet
+            return false;
         }
     }
     return true;
@@ -53,6 +54,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     strikes: 0,
     globalTimeRemaining: GLOBAL_TIME_LIMIT,
     turnTimeRemaining: TURN_TIME_LIMIT,
+    hintsRemaining: 3,
 
     actions: {
         startGame: () => {
@@ -69,13 +71,21 @@ export const useGameStore = create<GameState>((set, get) => ({
             const initialGuessed = shuffled.slice(0, 3);
 
             set({
-                status: 'PLAYING',
+                status: 'STARTING', // Countdown state
                 currentPuzzle: randomPuzzle,
                 guessedLetters: initialGuessed,
                 strikes: 0,
                 globalTimeRemaining: GLOBAL_TIME_LIMIT,
                 turnTimeRemaining: TURN_TIME_LIMIT,
+                hintsRemaining: 3
             });
+        },
+
+        startActiveGameplay: () => {
+            const state = get();
+            if (state.status === 'STARTING') {
+                set({ status: 'PLAYING' });
+            }
         },
 
         guessLetter: (letter: string) => {
@@ -121,6 +131,39 @@ export const useGameStore = create<GameState>((set, get) => ({
                         turnTimeRemaining: TURN_TIME_LIMIT, // Spec says reset turn timer on valid input (guess)
                     });
                 }
+            }
+        },
+
+        useHint: () => {
+            const state = get();
+            if (state.status !== 'PLAYING' || state.hintsRemaining <= 0 || !state.currentPuzzle) return;
+
+            const puzzleText = state.currentPuzzle.text.toUpperCase();
+
+            // Find unrevealed letters (A-Z only)
+            const availableLetters = Array.from(new Set(
+                puzzleText.split('').filter(char =>
+                    /[A-Z]/.test(char) && !state.guessedLetters.includes(char)
+                )
+            ));
+
+            if (availableLetters.length === 0) return;
+
+            // Pick random
+            const randomLetter = availableLetters[Math.floor(Math.random() * availableLetters.length)];
+
+            // Decrement hints and reset turn timer
+            const newGuessed = [...state.guessedLetters, randomLetter];
+
+            set({
+                hintsRemaining: state.hintsRemaining - 1,
+                guessedLetters: newGuessed,
+                turnTimeRemaining: TURN_TIME_LIMIT
+            });
+
+            // Check win condition after hint
+            if (checkWinCondition(state.currentPuzzle, newGuessed)) {
+                set({ status: 'WON' });
             }
         },
 
