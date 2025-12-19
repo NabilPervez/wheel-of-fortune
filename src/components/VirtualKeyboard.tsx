@@ -26,7 +26,7 @@ export const VirtualKeyboard = () => {
     };
 
     return (
-        <div className="w-full flex-1 flex flex-col justify-end pb-4 px-1 gap-2 select-none">
+        <div className="w-full flex-1 flex flex-col justify-start pt-4 px-1 gap-2 select-none">
             {KEYS.map((row, rIdx) => (
                 <div key={rIdx} className="flex justify-center gap-1.5 w-full">
                     {row.map((char) => {
