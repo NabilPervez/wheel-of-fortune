@@ -150,23 +150,10 @@ function App() {
       {/* Bottom - Input (Rest of space) */}
       <section className="flex-1 min-h-0 bg-neutral-900 border-t border-white/10 flex flex-col pb-safe-bottom z-20 shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
 
-        {/* Hint Button Bar (Centered above keyboard) */}
-        <div className="w-full flex justify-center py-2 bg-white/5 border-b border-white/5">
-          <button
-            onClick={useHint}
-            disabled={status !== 'PLAYING' || hintsRemaining <= 0}
-            className="flex items-center gap-2 px-6 py-2 rounded-full bg-blue-600 hover:bg-blue-500 disabled:bg-blue-900/50 disabled:text-blue-200/50 text-white font-bold text-sm tracking-wider uppercase transition-all shadow-[0_0_15px_rgba(37,99,235,0.3)] disabled:shadow-none transform active:scale-95"
-          >
-            <span>Hint</span>
-            <span className="bg-white/20 px-2 rounded text-xs">{hintsRemaining}</span>
-          </button>
-        </div>
+        {/* Controls Bar (Hint + Solve + New Game) */}
+        <div className="w-full flex justify-between items-center px-4 py-2 bg-white/5 border-b border-white/5">
 
-        <div className="w-full flex justify-between items-center px-4 py-2 border-b border-white/5 bg-white/5">
-          <div className="text-[10px] text-gray-500 uppercase tracking-widest">
-            {/* Version text removed */}
-          </div>
-          <div className="flex gap-2">
+          <div className="flex-1 flex justify-start">
             {(status === 'WON' || status === 'LOST') && (
               <button
                 onClick={() => startGame()}
@@ -175,15 +162,28 @@ function App() {
                 New Game
               </button>
             )}
+          </div>
+
+          <div className="flex gap-4">
+            <button
+              onClick={useHint}
+              disabled={status !== 'PLAYING' || hintsRemaining <= 0}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-600 hover:bg-blue-500 disabled:bg-blue-900/50 disabled:text-blue-200/50 text-white font-bold text-xs tracking-wider uppercase transition-all shadow-sm disabled:shadow-none transform active:scale-95"
+            >
+              <span>Hint</span>
+              <span className="bg-white/20 px-1.5 rounded text-[10px]">{hintsRemaining}</span>
+            </button>
+
             <button
               onClick={handleSolve}
               disabled={status !== 'PLAYING'}
-              className="text-xs font-bold text-yellow-400 disabled:opacity-50 disabled:cursor-not-allowed hover:text-yellow-300 uppercase tracking-wider border border-yellow-500/30 px-3 py-1.5 rounded hover:bg-yellow-500/10 transition-colors shadow-[0_0_10px_rgba(234,179,8,0.2)]"
+              className="text-xs font-bold text-yellow-400 disabled:opacity-50 disabled:cursor-not-allowed hover:text-yellow-300 uppercase tracking-wider border border-yellow-500/30 px-3 py-1.5 rounded hover:bg-yellow-500/10 transition-colors shadow-sm"
             >
               Solve
             </button>
           </div>
         </div>
+
         <VirtualKeyboard />
       </section>
 
