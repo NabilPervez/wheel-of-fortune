@@ -10,14 +10,14 @@ export const PuzzleBoard = () => {
     const words = currentPuzzle.text.split(' ');
 
     return (
-        <div className="w-full flex flex-col items-center justify-center p-2">
-            <div className="bg-yellow-500/20 px-4 py-1 rounded-full mb-6 border border-yellow-500/50">
-                <h2 className="text-sm font-bold text-yellow-400 tracking-widest uppercase shadow-sm">
+        <div className="w-full h-full flex flex-col items-center justify-start py-2 overflow-y-auto noscroll">
+            <div className="bg-yellow-500/10 px-3 py-0.5 rounded-full mb-2 border border-yellow-500/30 shrink-0">
+                <h2 className="text-[10px] sm:text-xs font-bold text-yellow-400 tracking-widest uppercase shadow-sm">
                     {currentPuzzle.category}
                 </h2>
             </div>
 
-            <div className="flex flex-wrap justify-center content-center gap-x-4 gap-y-2 w-full max-w-2xl px-2">
+            <div className="flex flex-wrap justify-center content-start gap-x-3 gap-y-3 w-full max-w-4xl px-2 flex-1">
                 {words.map((word, wIdx) => (
                     <div key={wIdx} className="flex flex-nowrap gap-1">
                         {word.split('').map((char, cIdx) => {
@@ -31,9 +31,9 @@ export const PuzzleBoard = () => {
                             // Let's render everything but style letters as tiles.
 
                             if (!isLetter) {
-                                // Punctuation/Space render (simple spacer or character)
+                                // Punctuation/Space render
                                 return (
-                                    <div key={cIdx} className="w-4 h-8 sm:w-6 sm:h-10 flex items-center justify-center text-white text-xl font-bold">
+                                    <div key={cIdx} className="w-4 h-10 sm:w-8 sm:h-16 flex items-end justify-center text-white text-2xl sm:text-4xl font-bold pb-1">
                                         {char}
                                     </div>
                                 )
@@ -43,8 +43,8 @@ export const PuzzleBoard = () => {
                                 <div
                                     key={cIdx}
                                     className={clsx(
-                                        "w-7 h-9 xs:w-8 xs:h-10 sm:w-10 sm:h-12 flex items-center justify-center font-bold rounded-sm shadow-md transition-all duration-300",
-                                        "text-xl xs:text-2xl sm:text-3xl", // Responsive text size
+                                        "w-8 h-12 xs:w-10 xs:h-14 sm:w-14 sm:h-20 flex items-center justify-center font-bold rounded-sm shadow-md transition-all duration-300",
+                                        "text-2xl xs:text-3xl sm:text-5xl", // Significantly larger text
                                         isRevealed
                                             ? "bg-white text-black scale-100"
                                             : "bg-white/10 border-2 border-white/30 text-transparent scale-95"

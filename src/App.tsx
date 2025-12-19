@@ -136,13 +136,13 @@ function App() {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-20 pointer-events-none bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
-      {/* Top 30% - Puzzle Board */}
-      <section className="h-[30%] flex-none flex items-center justify-center border-b border-white/5 bg-gradient-to-b from-white/5 to-transparent relative z-10 pt-safe-top">
+      {/* Top 40% - Puzzle Board */}
+      <section className="h-[40%] flex-none flex items-center justify-center border-b border-white/5 bg-gradient-to-b from-white/5 to-transparent relative z-10 pt-safe-top p-2">
         <PuzzleBoard />
       </section>
 
-      {/* Middle 25% - HUD */}
-      <section className="h-[25%] flex-none flex flex-col justify-center items-center relative z-0">
+      {/* Middle 15% - HUD */}
+      <section className="h-[15%] flex-none flex flex-col justify-center items-center relative z-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-500/10 via-transparent to-transparent opacity-50" />
         <HUD />
       </section>
@@ -150,30 +150,35 @@ function App() {
       {/* Bottom - Input (Rest of space) */}
       <section className="flex-1 min-h-0 bg-neutral-900 border-t border-white/10 flex flex-col pb-safe-bottom z-20 shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
 
-        {/* Controls Bar (Hint + Solve + New Game) */}
-        <div className="w-full flex justify-between items-center px-4 py-2 bg-white/5 border-b border-white/5">
+        {/* Controls Bar */}
+        <div className="w-full grid grid-cols-3 items-center px-2 py-2 bg-white/5 border-b border-white/5">
 
-          <div className="flex-1 flex justify-start">
+          {/* Left: New Game */}
+          <div className="flex justify-start">
             {(status === 'WON' || status === 'LOST') && (
               <button
                 onClick={() => startGame()}
-                className="text-xs font-bold text-white uppercase tracking-wider bg-white/10 px-3 py-1.5 rounded hover:bg-white/20 transition-colors"
+                className="text-[10px] xs:text-xs font-bold text-white uppercase tracking-wider bg-white/10 px-2 py-1.5 rounded hover:bg-white/20 transition-colors whitespace-nowrap"
               >
                 New Game
               </button>
             )}
           </div>
 
-          <div className="flex gap-4">
+          {/* Center: Hint */}
+          <div className="flex justify-center">
             <button
               onClick={useHint}
               disabled={status !== 'PLAYING' || hintsRemaining <= 0}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-600 hover:bg-blue-500 disabled:bg-blue-900/50 disabled:text-blue-200/50 text-white font-bold text-xs tracking-wider uppercase transition-all shadow-sm disabled:shadow-none transform active:scale-95"
+              className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-blue-600 hover:bg-blue-500 disabled:bg-blue-900/50 disabled:text-blue-200/50 text-white font-bold text-xs tracking-wider uppercase transition-all shadow-sm disabled:shadow-none transform active:scale-95"
             >
               <span>Hint</span>
               <span className="bg-white/20 px-1.5 rounded text-[10px]">{hintsRemaining}</span>
             </button>
+          </div>
 
+          {/* Right: Solve */}
+          <div className="flex justify-end">
             <button
               onClick={handleSolve}
               disabled={status !== 'PLAYING'}

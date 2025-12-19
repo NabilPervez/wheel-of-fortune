@@ -6,7 +6,7 @@ export const HUD = () => {
     const { globalTimeRemaining, turnTimeRemaining, status } = useGameStore();
 
     return (
-        <div className="flex items-center justify-center w-full gap-4 sm:gap-8 py-2 md:py-4">
+        <div className="flex items-center justify-center w-full gap-4 sm:gap-8 py-0.5">
 
             {/* Global Timer */}
             <div className="flex flex-col items-center gap-1">
