@@ -2,7 +2,7 @@ import { useGameStore } from '../store/useGameStore';
 import clsx from 'clsx';
 
 export const PuzzleBoard = () => {
-    const { currentPuzzle, guessedLetters } = useGameStore();
+    const { currentPuzzle, guessedLetters, status } = useGameStore();
 
     if (!currentPuzzle) return <div className="text-white opacity-50">Press Start</div>;
 
@@ -22,7 +22,7 @@ export const PuzzleBoard = () => {
                     <div key={wIdx} className="flex gap-1">
                         {word.split('').map((char, cIdx) => {
                             const isLetter = /[A-Z]/.test(char);
-                            const isRevealed = guessedLetters.includes(char) || !isLetter;
+                            const isRevealed = guessedLetters.includes(char) || !isLetter || status === 'LOST';
 
                             if (!isLetter) return null; // Skip non-letters for tile rendering if any
 
