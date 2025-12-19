@@ -6,7 +6,7 @@ import { useGameStore, useGameActions } from './store/useGameStore'
 import { useSoundEffects } from './hooks/useSoundEffects'
 
 function App() {
-  const { status, currentPuzzle, guessedLetters, strikes } = useGameStore()
+  const { status, currentPuzzle, guessedLetters } = useGameStore()
   const { startGame, tick, attemptSolve } = useGameActions()
   const { playCorrect, playWrong, playWin, playLose } = useSoundEffects()
 
