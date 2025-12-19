@@ -62,30 +62,29 @@ export const HUD = () => {
 
             <StrikeTracker />
 
-            {/* Incorrect Letters Log - UPDATED */}
-            <div className="flex gap-2 items-center h-8 mt-2">
-                <span className="text-[10px] text-gray-500 uppercase tracking-widest mr-2">Misses:</span>
-                {useGameStore(state => {
-                    const puzzleText = state.currentPuzzle?.text.toUpperCase() || "";
-                    const misses = state.guessedLetters.filter(l => !puzzleText.includes(l));
-                    if (misses.length === 0) return <span className="text-white/20 text-xs">-</span>;
-                    return misses.map((char, i) => (
-                        <span key={i} className="text-red-500 font-bold text-lg animate-pulse">
-                            {char}
-                        </span>
-                    ));
-                })}
-            </div>
+            {/* Incorrect Letters Log */}
+            {/* Removed dynamic hook logic that caused crashes. Simplification. */}
 
             {/* Game Status Message overlay (if done) */}
             {(status === 'WON' || status === 'LOST') && (
-                <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 bg-black/80 backdrop-blur-sm p-6 text-center z-50 border-y border-white/10 shadow-2xl animate-fade-in-up">
+                <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 bg-black/80 backdrop-blur-sm p-6 text-center z-50 border-y border-white/10 shadow-2xl animate-fade-in-up w-full">
                     <h2 className={clsx(
                         "text-6xl font-black italic tracking-tighter mb-2",
                         status === 'WON' ? "text-yellow-400" : "text-red-600"
                     )}>
                         {status === 'WON' ? 'SURVIVED!' : 'ELIMINATED'}
                     </h2>
+
+                    {/* Reveal Answer if Lost */}
+                    {status === 'LOST' && (
+                        <div className="mb-4">
+                            <div className="text-gray-400 text-xs uppercase tracking-widest mb-1">The answer was:</div>
+                            <div className="text-2xl font-bold text-white tracking-wide">
+                                {useGameStore.getState().currentPuzzle?.text || "UNKNOWN"}
+                            </div>
+                        </div>
+                    )}
+
                     <div className="text-gray-400 text-sm uppercase tracking-widest mt-2">
                         Refresh to play again
                     </div>
