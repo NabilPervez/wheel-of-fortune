@@ -1,0 +1,32 @@
+[
+    {
+        "id": "101",
+        "category": "THING",
+        "text": "PEANUT BUTTER JELLY TIME",
+        "difficulty": 1
+    },
+    {
+        "id": "102",
+        "category": "PHRASE",
+        "text": "MAY THE FORCE BE WITH YOU",
+        "difficulty": 1
+    },
+    {
+        "id": "103",
+        "category": "PLACE",
+        "text": "NEW YORK CITY",
+        "difficulty": 1
+    },
+    {
+        "id": "104",
+        "category": "MOVIE",
+        "text": "THE SHAWSHANK REDEMPTION",
+        "difficulty": 2
+    },
+    {
+        "id": "105",
+        "category": "SONG LYRICS",
+        "text": "NEVER GONNA GIVE YOU UP",
+        "difficulty": 2
+    }
+]
