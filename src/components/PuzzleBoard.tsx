@@ -10,14 +10,14 @@ export const PuzzleBoard = () => {
     const words = currentPuzzle.text.split(' ');
 
     return (
-        <div className="w-full h-full flex flex-col items-center justify-start py-2 overflow-y-auto noscroll">
-            <div className="bg-yellow-500/10 px-3 py-0.5 rounded-full mb-2 border border-yellow-500/30 shrink-0">
+        <div className="w-full h-full flex flex-col items-center justify-end pb-8 pt-2 overflow-y-auto noscroll">
+            <div className="bg-yellow-500/10 px-3 py-0.5 rounded-full mb-4 border border-yellow-500/30 shrink-0">
                 <h2 className="text-[10px] sm:text-xs font-bold text-yellow-400 tracking-widest uppercase shadow-sm">
                     {currentPuzzle.category}
                 </h2>
             </div>
 
-            <div className="flex flex-wrap justify-center content-start gap-x-3 gap-y-3 w-full max-w-4xl px-2 flex-1">
+            <div className="flex flex-wrap justify-center content-center gap-x-3 gap-y-3 w-full max-w-4xl px-2">
                 {words.map((word, wIdx) => (
                     <div key={wIdx} className="flex flex-nowrap gap-1">
                         {word.split('').map((char, cIdx) => {
