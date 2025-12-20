@@ -206,10 +206,10 @@ function App() {
 
       {/* Game Status Message overlay (if done) */}
       {(status === 'WON' || status === 'LOST') && (
-        <div className="absolute inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
-          <div className="w-full max-w-md bg-neutral-900 border border-white/10 rounded-2xl p-6 text-center shadow-2xl transform transition-all">
+        <div className="absolute top-0 left-0 right-0 h-[55%] z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-fade-in border-b border-white/20">
+          <div className="w-full max-w-sm bg-neutral-900 border border-white/10 rounded-2xl p-6 text-center shadow-2xl transform transition-all">
             <h2 className={clsx(
-              "text-5xl xs:text-6xl font-black italic tracking-tighter mb-4",
+              "text-4xl xs:text-5xl font-black italic tracking-tighter mb-4",
               status === 'WON' ? "text-yellow-400" : "text-red-600"
             )}>
               {status === 'WON' ? 'SURVIVED!' : 'ELIMINATED'}
@@ -217,9 +217,9 @@ function App() {
 
             {/* Reveal Answer if Lost */}
             {status === 'LOST' && (
-              <div className="mb-6 bg-white/5 rounded-xl p-4">
-                <div className="text-gray-400 text-xs uppercase tracking-widest mb-1">The answer was:</div>
-                <div className="text-xl xs:text-2xl font-bold text-white tracking-wide break-words">
+              <div className="mb-4 bg-white/5 rounded-xl p-3">
+                <div className="text-gray-400 text-[10px] uppercase tracking-widest mb-1">The answer was:</div>
+                <div className="text-lg xs:text-xl font-bold text-white tracking-wide break-words">
                   {useGameStore.getState().currentPuzzle?.text || "UNKNOWN"}
                 </div>
               </div>
@@ -229,7 +229,7 @@ function App() {
               <button
                 onClick={() => window.location.reload()}
                 className={clsx(
-                  "w-full px-6 py-4 rounded-xl font-bold text-sm tracking-widest uppercase transition-all transform hover:scale-[1.02] shadow-lg flex items-center justify-center gap-2",
+                  "w-full px-6 py-3 rounded-xl font-bold text-sm tracking-widest uppercase transition-all transform hover:scale-[1.02] shadow-lg flex items-center justify-center gap-2",
                   status === 'WON'
                     ? "bg-yellow-400 text-black hover:bg-yellow-300 shadow-yellow-400/20"
                     : "bg-red-600 text-white hover:bg-red-500 shadow-red-600/20"
