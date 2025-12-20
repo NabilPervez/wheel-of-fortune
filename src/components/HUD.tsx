@@ -3,7 +3,7 @@ import { StrikeTracker } from './StrikeTracker';
 import clsx from 'clsx';
 
 export const HUD = () => {
-    const { globalTimeRemaining, turnTimeRemaining, status } = useGameStore();
+    const { globalTimeRemaining, turnTimeRemaining } = useGameStore();
 
     return (
         <div className="flex items-center justify-center w-full gap-4 sm:gap-8 py-0.5">
