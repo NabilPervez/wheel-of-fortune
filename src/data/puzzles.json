@@ -598,5 +598,605 @@
         "category": "PHRASE",
         "text": "YOU CANT JUDGE A BOOK BY ITS COVER",
         "difficulty": 3
+    },
+    {
+        "id": "101",
+        "category": "MOVIE",
+        "text": "THE MATRIX",
+        "difficulty": 1
+    },
+    {
+        "id": "102",
+        "category": "PHRASE",
+        "text": "A DIME A DOZEN",
+        "difficulty": 1
+    },
+    {
+        "id": "103",
+        "category": "FOOD & DRINK",
+        "text": "AVOCADO TOAST",
+        "difficulty": 1
+    },
+    {
+        "id": "104",
+        "category": "PLACE",
+        "text": "MOUNT KILIMANJARO",
+        "difficulty": 2
+    },
+    {
+        "id": "105",
+        "category": "THING",
+        "text": "SMARTPHONE",
+        "difficulty": 1
+    },
+    {
+        "id": "106",
+        "category": "SONG TITLE",
+        "text": "HEY JUDE",
+        "difficulty": 1
+    },
+    {
+        "id": "107",
+        "category": "PHRASE",
+        "text": "BARKING UP THE WRONG TREE",
+        "difficulty": 2
+    },
+    {
+        "id": "108",
+        "category": "ANIMAL",
+        "text": "BALD EAGLE",
+        "difficulty": 1
+    },
+    {
+        "id": "109",
+        "category": "TV SHOW",
+        "text": "THE SOPRANOS",
+        "difficulty": 2
+    },
+    {
+        "id": "110",
+        "category": "PROFESSION",
+        "text": "ASTRONAUT",
+        "difficulty": 1
+    },
+    {
+        "id": "111",
+        "category": "PLACE",
+        "text": "THE GREAT PYRAMID OF GIZA",
+        "difficulty": 2
+    },
+    {
+        "id": "112",
+        "category": "THING",
+        "text": "COFFEE MAKER",
+        "difficulty": 1
+    },
+    {
+        "id": "113",
+        "category": "PHRASE",
+        "text": "ADD INSULT TO INJURY",
+        "difficulty": 2
+    },
+    {
+        "id": "114",
+        "category": "MOVIE",
+        "text": "GLADIATOR",
+        "difficulty": 1
+    },
+    {
+        "id": "115",
+        "category": "FOOD & DRINK",
+        "text": "CHICKEN TIKKA MASALA",
+        "difficulty": 2
+    },
+    {
+        "id": "116",
+        "category": "PERSON",
+        "text": "GEORGE WASHINGTON",
+        "difficulty": 1
+    },
+    {
+        "id": "117",
+        "category": "PHRASE",
+        "text": "BY THE SKIN OF YOUR TEETH",
+        "difficulty": 3
+    },
+    {
+        "id": "118",
+        "category": "THING",
+        "text": "BINOCULARS",
+        "difficulty": 2
+    },
+    {
+        "id": "119",
+        "category": "PLACE",
+        "text": "THE LOUVRE",
+        "difficulty": 2
+    },
+    {
+        "id": "120",
+        "category": "SONG TITLE",
+        "text": "STAIRWAY TO HEAVEN",
+        "difficulty": 2
+    },
+    {
+        "id": "121",
+        "category": "PHRASE",
+        "text": "CAUGHT RED HANDED",
+        "difficulty": 1
+    },
+    {
+        "id": "122",
+        "category": "MOVIE",
+        "text": "THE AVENGERS",
+        "difficulty": 1
+    },
+    {
+        "id": "123",
+        "category": "SPORT",
+        "text": "BASKETBALL",
+        "difficulty": 1
+    },
+    {
+        "id": "124",
+        "category": "THING",
+        "text": "ACOUSTIC GUITAR",
+        "difficulty": 1
+    },
+    {
+        "id": "125",
+        "category": "PHRASE",
+        "text": "BACK TO SQUARE ONE",
+        "difficulty": 2
+    },
+    {
+        "id": "126",
+        "category": "FOOD & DRINK",
+        "text": "SPICY TUNA ROLL",
+        "difficulty": 1
+    },
+    {
+        "id": "127",
+        "category": "PLACE",
+        "text": "THE TAJ MAHAL",
+        "difficulty": 1
+    },
+    {
+        "id": "128",
+        "category": "TV SHOW",
+        "text": "SEINFELD",
+        "difficulty": 1
+    },
+    {
+        "id": "129",
+        "category": "PHRASE",
+        "text": "DO A BARREL ROLL",
+        "difficulty": 2
+    },
+    {
+        "id": "130",
+        "category": "THING",
+        "text": "SKATEBOARD",
+        "difficulty": 1
+    },
+    {
+        "id": "131",
+        "category": "MOVIE",
+        "text": "INCEPTION",
+        "difficulty": 1
+    },
+    {
+        "id": "132",
+        "category": "PHRASE",
+        "text": "ELEPHANT IN THE ROOM",
+        "difficulty": 2
+    },
+    {
+        "id": "133",
+        "category": "PLACE",
+        "text": "THE VATICAN",
+        "difficulty": 2
+    },
+    {
+        "id": "134",
+        "category": "SONG TITLE",
+        "text": "IMAGINE",
+        "difficulty": 1
+    },
+    {
+        "id": "135",
+        "category": "THING",
+        "text": "BLUETOOTH SPEAKER",
+        "difficulty": 1
+    },
+    {
+        "id": "136",
+        "category": "PHRASE",
+        "text": "FIT AS A FIDDLE",
+        "difficulty": 2
+    },
+    {
+        "id": "137",
+        "category": "FOOD & DRINK",
+        "text": "BEEF WELLINGTON",
+        "difficulty": 3
+    },
+    {
+        "id": "138",
+        "category": "MOVIE",
+        "text": "PULP FICTION",
+        "difficulty": 2
+    },
+    {
+        "id": "139",
+        "category": "PHRASE",
+        "text": "GO THE EXTRA MILE",
+        "difficulty": 1
+    },
+    {
+        "id": "140",
+        "category": "THING",
+        "text": "LAWNMOWER",
+        "difficulty": 2
+    },
+    {
+        "id": "141",
+        "category": "PLACE",
+        "text": "MOUNT FUJI",
+        "difficulty": 2
+    },
+    {
+        "id": "142",
+        "category": "TV SHOW",
+        "text": "THE X FILES",
+        "difficulty": 2
+    },
+    {
+        "id": "143",
+        "category": "PHRASE",
+        "text": "GOOD THINGS COME TO THOSE WHO WAIT",
+        "difficulty": 3
+    },
+    {
+        "id": "144",
+        "category": "SONG TITLE",
+        "text": "WONDERWALL",
+        "difficulty": 1
+    },
+    {
+        "id": "145",
+        "category": "THING",
+        "text": "HAIR DRYER",
+        "difficulty": 1
+    },
+    {
+        "id": "146",
+        "category": "MOVIE",
+        "text": "THE SILENCE OF THE LAMBS",
+        "difficulty": 2
+    },
+    {
+        "id": "147",
+        "category": "PHRASE",
+        "text": "HANG IN THERE",
+        "difficulty": 1
+    },
+    {
+        "id": "148",
+        "category": "PLACE",
+        "text": "YELLOWSTONE NATIONAL PARK",
+        "difficulty": 2
+    },
+    {
+        "id": "149",
+        "category": "FOOD & DRINK",
+        "text": "LOBSTER TAIL",
+        "difficulty": 2
+    },
+    {
+        "id": "150",
+        "category": "THING",
+        "text": "NOISE CANCELING HEADPHONES",
+        "difficulty": 2
+    },
+    {
+        "id": "151",
+        "category": "PHRASE",
+        "text": "HIT THE SACK",
+        "difficulty": 1
+    },
+    {
+        "id": "152",
+        "category": "MOVIE",
+        "text": "GHOSTBUSTERS",
+        "difficulty": 1
+    },
+    {
+        "id": "153",
+        "category": "PLACE",
+        "text": "THE WHITE HOUSE",
+        "difficulty": 1
+    },
+    {
+        "id": "154",
+        "category": "SONG TITLE",
+        "text": "LIKE A ROLLING STONE",
+        "difficulty": 2
+    },
+    {
+        "id": "155",
+        "category": "PHRASE",
+        "text": "LEAVE NO STONE UNTURNED",
+        "difficulty": 2
+    },
+    {
+        "id": "156",
+        "category": "THING",
+        "text": "SMOKE DETECTOR",
+        "difficulty": 1
+    },
+    {
+        "id": "157",
+        "category": "TV SHOW",
+        "text": "DOCTOR WHO",
+        "difficulty": 2
+    },
+    {
+        "id": "158",
+        "category": "PHRASE",
+        "text": "MAKE A LONG STORY SHORT",
+        "difficulty": 2
+    },
+    {
+        "id": "159",
+        "category": "FOOD & DRINK",
+        "text": "CHICKEN PARMESAN",
+        "difficulty": 2
+    },
+    {
+        "id": "160",
+        "category": "MOVIE",
+        "text": "THE TERMINATOR",
+        "difficulty": 1
+    },
+    {
+        "id": "161",
+        "category": "PLACE",
+        "text": "CENTRAL PARK",
+        "difficulty": 1
+    },
+    {
+        "id": "162",
+        "category": "PHRASE",
+        "text": "ON THE BALL",
+        "difficulty": 1
+    },
+    {
+        "id": "163",
+        "category": "THING",
+        "text": "COFFEE MUG",
+        "difficulty": 1
+    },
+    {
+        "id": "164",
+        "category": "SONG TITLE",
+        "text": "THRILLER",
+        "difficulty": 1
+    },
+    {
+        "id": "165",
+        "category": "PHRASE",
+        "text": "PULL YOURSELF TOGETHER",
+        "difficulty": 2
+    },
+    {
+        "id": "166",
+        "category": "MOVIE",
+        "text": "THE SHAWSHANK REDEMPTION",
+        "difficulty": 2
+    },
+    {
+        "id": "167",
+        "category": "PLACE",
+        "text": "BURJ KHALIFA",
+        "difficulty": 2
+    },
+    {
+        "id": "168",
+        "category": "FOOD & DRINK",
+        "text": "CINNAMON ROLL",
+        "difficulty": 1
+    },
+    {
+        "id": "169",
+        "category": "PHRASE",
+        "text": "SO FAR SO GOOD",
+        "difficulty": 1
+    },
+    {
+        "id": "170",
+        "category": "THING",
+        "text": "CEILING FAN",
+        "difficulty": 1
+    },
+    {
+        "id": "171",
+        "category": "TV SHOW",
+        "text": "THE TWILIGHT ZONE",
+        "difficulty": 2
+    },
+    {
+        "id": "172",
+        "category": "PHRASE",
+        "text": "SPEAK OF THE DEVIL",
+        "difficulty": 2
+    },
+    {
+        "id": "173",
+        "category": "MOVIE",
+        "text": "FINDING NEMO",
+        "difficulty": 1
+    },
+    {
+        "id": "174",
+        "category": "PLACE",
+        "text": "THE PENTAGON",
+        "difficulty": 2
+    },
+    {
+        "id": "175",
+        "category": "SONG TITLE",
+        "text": "LET IT BE",
+        "difficulty": 1
+    },
+    {
+        "id": "176",
+        "category": "PHRASE",
+        "text": "TIME FLIES WHEN YOU ARE HAVING FUN",
+        "difficulty": 3
+    },
+    {
+        "id": "177",
+        "category": "THING",
+        "text": "SEWING MACHINE",
+        "difficulty": 2
+    },
+    {
+        "id": "178",
+        "category": "FOOD & DRINK",
+        "text": "PAD THAI",
+        "difficulty": 2
+    },
+    {
+        "id": "179",
+        "category": "PHRASE",
+        "text": "WEATHER THE STORM",
+        "difficulty": 2
+    },
+    {
+        "id": "180",
+        "category": "MOVIE",
+        "text": "SPIDER MAN",
+        "difficulty": 1
+    },
+    {
+        "id": "181",
+        "category": "PLACE",
+        "text": "ALCATRAZ ISLAND",
+        "difficulty": 2
+    },
+    {
+        "id": "182",
+        "category": "PHRASE",
+        "text": "YOUR GUESS IS AS GOOD AS MINE",
+        "difficulty": 3
+    },
+    {
+        "id": "183",
+        "category": "THING",
+        "text": "FLASHLIGHT",
+        "difficulty": 1
+    },
+    {
+        "id": "184",
+        "category": "TV SHOW",
+        "text": "MAD MEN",
+        "difficulty": 2
+    },
+    {
+        "id": "185",
+        "category": "PHRASE",
+        "text": "A TASTE OF YOUR OWN MEDICINE",
+        "difficulty": 3
+    },
+    {
+        "id": "186",
+        "category": "MOVIE",
+        "text": "JAWS",
+        "difficulty": 1
+    },
+    {
+        "id": "187",
+        "category": "FOOD & DRINK",
+        "text": "CHICKEN AND WAFFLES",
+        "difficulty": 2
+    },
+    {
+        "id": "188",
+        "category": "PLACE",
+        "text": "THE ACROPOLIS",
+        "difficulty": 2
+    },
+    {
+        "id": "189",
+        "category": "SONG TITLE",
+        "text": "BORN TO RUN",
+        "difficulty": 2
+    },
+    {
+        "id": "190",
+        "category": "PHRASE",
+        "text": "WILD GOOSE CHASE",
+        "difficulty": 2
+    },
+    {
+        "id": "191",
+        "category": "THING",
+        "text": "BICYCLE HELMET",
+        "difficulty": 1
+    },
+    {
+        "id": "192",
+        "category": "SPORT",
+        "text": "SNOWBOARDING",
+        "difficulty": 1
+    },
+    {
+        "id": "193",
+        "category": "PERSON",
+        "text": "MARIE CURIE",
+        "difficulty": 2
+    },
+    {
+        "id": "194",
+        "category": "MOVIE",
+        "text": "THE SOUND OF MUSIC",
+        "difficulty": 1
+    },
+    {
+        "id": "195",
+        "category": "PHRASE",
+        "text": "YOU CAN SAY THAT AGAIN",
+        "difficulty": 2
+    },
+    {
+        "id": "196",
+        "category": "PLACE",
+        "text": "YOSEMITE NATIONAL PARK",
+        "difficulty": 2
+    },
+    {
+        "id": "197",
+        "category": "FOOD & DRINK",
+        "text": "CHOCOLATE MILKSHAKE",
+        "difficulty": 1
+    },
+    {
+        "id": "198",
+        "category": "TV SHOW",
+        "text": "THE MANDALORIAN",
+        "difficulty": 1
+    },
+    {
+        "id": "199",
+        "category": "ANIMAL",
+        "text": "GRIZZLY BEAR",
+        "difficulty": 1
+    },
+    {
+        "id": "200",
+        "category": "PHRASE",
+        "text": "WRAP YOUR HEAD AROUND SOMETHING",
+        "difficulty": 3
     }
 ]
