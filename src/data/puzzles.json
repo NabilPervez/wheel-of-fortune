@@ -1198,5 +1198,605 @@
         "category": "PHRASE",
         "text": "WRAP YOUR HEAD AROUND SOMETHING",
         "difficulty": 3
+    },
+    {
+        "id": "201",
+        "category": "AROUND THE HOUSE",
+        "text": "IRONING BOARD",
+        "difficulty": 1
+    },
+    {
+        "id": "202",
+        "category": "PHRASE",
+        "text": "A DROP IN THE BUCKET",
+        "difficulty": 2
+    },
+    {
+        "id": "203",
+        "category": "MOVIE",
+        "text": "THE PRINCESS BRIDE",
+        "difficulty": 1
+    },
+    {
+        "id": "204",
+        "category": "FOOD & DRINK",
+        "text": "PEANUT BUTTER AND JELLY",
+        "difficulty": 1
+    },
+    {
+        "id": "205",
+        "category": "PLACE",
+        "text": "THE SAHARA DESERT",
+        "difficulty": 1
+    },
+    {
+        "id": "206",
+        "category": "THING",
+        "text": "MAGNIFYING GLASS",
+        "difficulty": 2
+    },
+    {
+        "id": "207",
+        "category": "SONG TITLE",
+        "text": "DANCING QUEEN",
+        "difficulty": 1
+    },
+    {
+        "id": "208",
+        "category": "ANIMAL",
+        "text": "GREAT WHITE SHARK",
+        "difficulty": 1
+    },
+    {
+        "id": "209",
+        "category": "TV SHOW",
+        "text": "I LOVE LUCY",
+        "difficulty": 2
+    },
+    {
+        "id": "210",
+        "category": "PROFESSION",
+        "text": "POLICE OFFICER",
+        "difficulty": 1
+    },
+    {
+        "id": "211",
+        "category": "SPORT",
+        "text": "FIGURE SKATING",
+        "difficulty": 1
+    },
+    {
+        "id": "212",
+        "category": "PERSON",
+        "text": "MARTIN LUTHER KING JR",
+        "difficulty": 1
+    },
+    {
+        "id": "213",
+        "category": "CHARACTER",
+        "text": "SPONGEBOB SQUAREPANTS",
+        "difficulty": 1
+    },
+    {
+        "id": "214",
+        "category": "EVENT",
+        "text": "THE OLYMPIC GAMES",
+        "difficulty": 1
+    },
+    {
+        "id": "215",
+        "category": "PHRASE",
+        "text": "BEST OF BOTH WORLDS",
+        "difficulty": 2
+    },
+    {
+        "id": "216",
+        "category": "MOVIE",
+        "text": "SCHINDLERS LIST",
+        "difficulty": 2
+    },
+    {
+        "id": "217",
+        "category": "FOOD & DRINK",
+        "text": "BLUEBERRY MUFFINS",
+        "difficulty": 1
+    },
+    {
+        "id": "218",
+        "category": "PLACE",
+        "text": "THE KREMLIN",
+        "difficulty": 2
+    },
+    {
+        "id": "219",
+        "category": "THING",
+        "text": "POCKET WATCH",
+        "difficulty": 2
+    },
+    {
+        "id": "220",
+        "category": "SONG TITLE",
+        "text": "SWEET CAROLINE",
+        "difficulty": 1
+    },
+    {
+        "id": "221",
+        "category": "ANIMAL",
+        "text": "EMPEROR PENGUIN",
+        "difficulty": 2
+    },
+    {
+        "id": "222",
+        "category": "TV SHOW",
+        "text": "JEOPARDY",
+        "difficulty": 1
+    },
+    {
+        "id": "223",
+        "category": "PROFESSION",
+        "text": "DENTAL HYGIENIST",
+        "difficulty": 2
+    },
+    {
+        "id": "224",
+        "category": "SPORT",
+        "text": "BEACH VOLLEYBALL",
+        "difficulty": 1
+    },
+    {
+        "id": "225",
+        "category": "PERSON",
+        "text": "AMELIA EARHART",
+        "difficulty": 2
+    },
+    {
+        "id": "226",
+        "category": "CHARACTER",
+        "text": "MICKEY MOUSE",
+        "difficulty": 1
+    },
+    {
+        "id": "227",
+        "category": "EVENT",
+        "text": "NEW YEARS EVE",
+        "difficulty": 1
+    },
+    {
+        "id": "228",
+        "category": "PHRASE",
+        "text": "CAUGHT BETWEEN A ROCK AND A HARD PLACE",
+        "difficulty": 3
+    },
+    {
+        "id": "229",
+        "category": "MOVIE",
+        "text": "GOOD WILL HUNTING",
+        "difficulty": 2
+    },
+    {
+        "id": "230",
+        "category": "FOOD & DRINK",
+        "text": "CHICKEN CAESAR SALAD",
+        "difficulty": 1
+    },
+    {
+        "id": "231",
+        "category": "PLACE",
+        "text": "MOUNT VESUVIUS",
+        "difficulty": 2
+    },
+    {
+        "id": "232",
+        "category": "THING",
+        "text": "BOARD GAME",
+        "difficulty": 1
+    },
+    {
+        "id": "233",
+        "category": "SONG TITLE",
+        "text": "DONT GO BREAKING MY HEART",
+        "difficulty": 2
+    },
+    {
+        "id": "234",
+        "category": "ANIMAL",
+        "text": "SIBERIAN HUSKY",
+        "difficulty": 1
+    },
+    {
+        "id": "235",
+        "category": "TV SHOW",
+        "text": "THE PRICE IS RIGHT",
+        "difficulty": 1
+    },
+    {
+        "id": "236",
+        "category": "PROFESSION",
+        "text": "VETERINARIAN",
+        "difficulty": 1
+    },
+    {
+        "id": "237",
+        "category": "SPORT",
+        "text": "GYMNASTICS",
+        "difficulty": 1
+    },
+    {
+        "id": "238",
+        "category": "PERSON",
+        "text": "WINSTON CHURCHILL",
+        "difficulty": 2
+    },
+    {
+        "id": "239",
+        "category": "CHARACTER",
+        "text": "JAMES BOND",
+        "difficulty": 1
+    },
+    {
+        "id": "240",
+        "category": "EVENT",
+        "text": "SUPER BOWL",
+        "difficulty": 1
+    },
+    {
+        "id": "241",
+        "category": "PHRASE",
+        "text": "CRYING WOLF",
+        "difficulty": 2
+    },
+    {
+        "id": "242",
+        "category": "MOVIE",
+        "text": "THE BIG LEBOWSKI",
+        "difficulty": 2
+    },
+    {
+        "id": "243",
+        "category": "FOOD & DRINK",
+        "text": "BAKED POTATO WITH SOUR CREAM",
+        "difficulty": 2
+    },
+    {
+        "id": "244",
+        "category": "PLACE",
+        "text": "THE AMAZON RAINFOREST",
+        "difficulty": 2
+    },
+    {
+        "id": "245",
+        "category": "THING",
+        "text": "FOUNTAIN PEN",
+        "difficulty": 2
+    },
+    {
+        "id": "246",
+        "category": "SONG TITLE",
+        "text": "RESPECT",
+        "difficulty": 1
+    },
+    {
+        "id": "247",
+        "category": "ANIMAL",
+        "text": "GIANT PANDA",
+        "difficulty": 1
+    },
+    {
+        "id": "248",
+        "category": "TV SHOW",
+        "text": "SESAME STREET",
+        "difficulty": 1
+    },
+    {
+        "id": "249",
+        "category": "PROFESSION",
+        "text": "ARCHITECT",
+        "difficulty": 2
+    },
+    {
+        "id": "250",
+        "category": "SPORT",
+        "text": "TENNIS",
+        "difficulty": 1
+    },
+    {
+        "id": "251",
+        "category": "PERSON",
+        "text": "CLEOPATRA",
+        "difficulty": 2
+    },
+    {
+        "id": "252",
+        "category": "CHARACTER",
+        "text": "SHERLOCK HOLMES",
+        "difficulty": 1
+    },
+    {
+        "id": "253",
+        "category": "EVENT",
+        "text": "HALLOWEEN",
+        "difficulty": 1
+    },
+    {
+        "id": "254",
+        "category": "PHRASE",
+        "text": "DOWN TO THE WIRE",
+        "difficulty": 2
+    },
+    {
+        "id": "255",
+        "category": "MOVIE",
+        "text": "THE BREAKFAST CLUB",
+        "difficulty": 1
+    },
+    {
+        "id": "256",
+        "category": "FOOD & DRINK",
+        "text": "SHRIMP COCKTAIL",
+        "difficulty": 2
+    },
+    {
+        "id": "257",
+        "category": "PLACE",
+        "text": "THE PANAMA CANAL",
+        "difficulty": 2
+    },
+    {
+        "id": "258",
+        "category": "THING",
+        "text": "TYPEWRITER",
+        "difficulty": 2
+    },
+    {
+        "id": "259",
+        "category": "SONG TITLE",
+        "text": "SUPERSTITION",
+        "difficulty": 2
+    },
+    {
+        "id": "260",
+        "category": "ANIMAL",
+        "text": "KILLER WHALE",
+        "difficulty": 1
+    },
+    {
+        "id": "261",
+        "category": "TV SHOW",
+        "text": "SATURDAY NIGHT LIVE",
+        "difficulty": 1
+    },
+    {
+        "id": "262",
+        "category": "PROFESSION",
+        "text": "FIREFIGHTER",
+        "difficulty": 1
+    },
+    {
+        "id": "263",
+        "category": "SPORT",
+        "text": "GOLF",
+        "difficulty": 1
+    },
+    {
+        "id": "264",
+        "category": "PERSON",
+        "text": "LEONARDO DA VINCI",
+        "difficulty": 2
+    },
+    {
+        "id": "265",
+        "category": "CHARACTER",
+        "text": "WONDER WOMAN",
+        "difficulty": 1
+    },
+    {
+        "id": "266",
+        "category": "EVENT",
+        "text": "VALENTINES DAY",
+        "difficulty": 1
+    },
+    {
+        "id": "267",
+        "category": "PHRASE",
+        "text": "EASY COME EASY GO",
+        "difficulty": 2
+    },
+    {
+        "id": "268",
+        "category": "MOVIE",
+        "text": "CASABLANCA",
+        "difficulty": 2
+    },
+    {
+        "id": "269",
+        "category": "FOOD & DRINK",
+        "text": "NEW YORK CHEESECAKE",
+        "difficulty": 1
+    },
+    {
+        "id": "270",
+        "category": "PLACE",
+        "text": "DEATH VALLEY",
+        "difficulty": 2
+    },
+    {
+        "id": "271",
+        "category": "THING",
+        "text": "TREADMILL",
+        "difficulty": 1
+    },
+    {
+        "id": "272",
+        "category": "SONG TITLE",
+        "text": "HOUND DOG",
+        "difficulty": 1
+    },
+    {
+        "id": "273",
+        "category": "ANIMAL",
+        "text": "CHEETAH",
+        "difficulty": 1
+    },
+    {
+        "id": "274",
+        "category": "TV SHOW",
+        "text": "THE JOY OF PAINTING",
+        "difficulty": 2
+    },
+    {
+        "id": "275",
+        "category": "PROFESSION",
+        "text": "CHEF",
+        "difficulty": 1
+    },
+    {
+        "id": "276",
+        "category": "SPORT",
+        "text": "SURFING",
+        "difficulty": 1
+    },
+    {
+        "id": "277",
+        "category": "PERSON",
+        "text": "JULIUS CAESAR",
+        "difficulty": 2
+    },
+    {
+        "id": "278",
+        "category": "CHARACTER",
+        "text": "BATMAN",
+        "difficulty": 1
+    },
+    {
+        "id": "279",
+        "category": "EVENT",
+        "text": "THANKSGIVING DAY",
+        "difficulty": 1
+    },
+    {
+        "id": "280",
+        "category": "PHRASE",
+        "text": "GO AGAINST THE GRAIN",
+        "difficulty": 2
+    },
+    {
+        "id": "281",
+        "category": "MOVIE",
+        "text": "THE EXORCIST",
+        "difficulty": 2
+    },
+    {
+        "id": "282",
+        "category": "FOOD & DRINK",
+        "text": "ROAST TURKEY",
+        "difficulty": 1
+    },
+    {
+        "id": "283",
+        "category": "PLACE",
+        "text": "THE ROCKY MOUNTAINS",
+        "difficulty": 1
+    },
+    {
+        "id": "284",
+        "category": "THING",
+        "text": "VINYL RECORD",
+        "difficulty": 2
+    },
+    {
+        "id": "285",
+        "category": "SONG TITLE",
+        "text": "I WILL SURVIVE",
+        "difficulty": 1
+    },
+    {
+        "id": "286",
+        "category": "ANIMAL",
+        "text": "GIRAFFE",
+        "difficulty": 1
+    },
+    {
+        "id": "287",
+        "category": "TV SHOW",
+        "text": "THE MUPPET SHOW",
+        "difficulty": 1
+    },
+    {
+        "id": "288",
+        "category": "PROFESSION",
+        "text": "LIBRARIAN",
+        "difficulty": 1
+    },
+    {
+        "id": "289",
+        "category": "SPORT",
+        "text": "WATER POLO",
+        "difficulty": 2
+    },
+    {
+        "id": "290",
+        "category": "PERSON",
+        "text": "NELSON MANDELA",
+        "difficulty": 2
+    },
+    {
+        "id": "291",
+        "category": "CHARACTER",
+        "text": "SUPERMAN",
+        "difficulty": 1
+    },
+    {
+        "id": "292",
+        "category": "EVENT",
+        "text": "THE WORLD CUP",
+        "difficulty": 1
+    },
+    {
+        "id": "293",
+        "category": "PHRASE",
+        "text": "IN THE HEAT OF THE MOMENT",
+        "difficulty": 2
+    },
+    {
+        "id": "294",
+        "category": "MOVIE",
+        "text": "ROCKY",
+        "difficulty": 1
+    },
+    {
+        "id": "295",
+        "category": "FOOD & DRINK",
+        "text": "PINEAPPLE UPSIDE DOWN CAKE",
+        "difficulty": 2
+    },
+    {
+        "id": "296",
+        "category": "PLACE",
+        "text": "THE DEAD SEA",
+        "difficulty": 2
+    },
+    {
+        "id": "297",
+        "category": "THING",
+        "text": "CASH REGISTER",
+        "difficulty": 1
+    },
+    {
+        "id": "298",
+        "category": "SONG TITLE",
+        "text": "YMCA",
+        "difficulty": 1
+    },
+    {
+        "id": "299",
+        "category": "ANIMAL",
+        "text": "KANGAROO",
+        "difficulty": 1
+    },
+    {
+        "id": "300",
+        "category": "TV SHOW",
+        "text": "WHEEL OF FORTUNE",
+        "difficulty": 1
     }
 ]
